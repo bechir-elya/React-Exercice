@@ -33,23 +33,14 @@ function App() {
 
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
-  const nextPokemon = () => {
-    setPokemonIndex(pokemonIndex + 1);
-  }
-
-  const previousPokemon = () => {
-    setPokemonIndex(pokemonIndex - 1);
-  }
-
   return (
     <>
       <div>
         <PokemonCard pokemon={pokemonList[pokemonIndex]} />
         <NavBar
           pokemonIndex={pokemonIndex}
-          nextPokemon={nextPokemon}
-          previousPokemon={previousPokemon}
-          pokemonListLength={pokemonList.length}
+          setPokemonIndex={setPokemonIndex}
+          pokemonList={pokemonList}
         />
       </div>
     </>
